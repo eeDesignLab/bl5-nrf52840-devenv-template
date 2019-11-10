@@ -2,6 +2,8 @@
 
 The goal of this project is to create a skeleton of a **customised firmware development environment** for build BLE and Bluetooth 5 applications running on Nordic’s nRF52 Series SoCs family, using the GNU ARM Embedded Toolchain and the Eclipse IDE. You could use it as a template whenever you start a new BLE or Bluetooth 5 application.
 
+Reference:  [eedesignlab.com](https://eedesignlab.com/development-environment-setup-using-nordics-nrf5-sdk-gnu-gcc-and-eclipse-ide-part-i/)
+
 
 
 ### Contents
@@ -83,10 +85,39 @@ The goal of this project is to create a skeleton of a **customised firmware deve
 ##### Project
 
 * Clone the project.
+
 * Download and extract the SDK into the project's folder.
-*  Install the command line tools (go [here](https://eedesignlab.com/2019/09/development-environment-setup-using-nordics-nrf5-sdk-gnu-gcc-and-eclipse-ide-part-i/) for help). 
 
+*  Install the command line tools on **Windows Host Machines** (go [here]( https://eedesignlab.com/development-environment-setup-using-nordics-nrf5-sdk-gnu-gcc-and-eclipse-ide-part-i/ ) for help). 
 
+  * From the project's root folder, run the script below:
+
+  ```bash
+  cd cmd-tools &&
+   curl -L https://www.nordicsemi.com/-/media/Software-and-other-downloads/Desktop-software/nRF-command-line-tools/sw/Versions-10-x-x/nRF-Command-Line-Tools_10_3_0_Installer_64.exe --output nRF-Command-Line-Tools_10_3_0_Installer_64.exe &&
+   ./nRF-Command-Line-Tools_10_3_0_Installer_64.exe &&
+   mkdir nrfjprog mergehex &&
+   cp -r C:/'Program Files'/'Nordic Semiconductor'/nrf-command-line-tools/bin/* ./nrfjprog &&
+   cp -r C:/'Program Files'/'Nordic Semiconductor'/nrf-command-line-tools/bin/* ./mergehex &&
+   rm -r ./nrfjprog/mer* && rm -r ./nrfjprog/headers/mer* && rm -r ./mergehex/nrf* &&
+   rm -r ./mergehex/headers/nr* && rm -r ./mergehex/headers/jlink* && rm -rf nRF* &&  
+   cd ..
+  ```
+
+- Install the command line tools on **Linux Host Machines** (go [here]( https://eedesignlab.com/development-environment-setup-using-nordics-nrf5-sdk-gnu-gcc-and-eclipse-ide-part-i/ ) for help). 
+  - From the project's root folder, run the script below:
+
+  ```bash
+  cd cmd-tools &&
+   curl -L https://www.nordicsemi.com/-/media/Software-and-other-downloads/Desktop-software/nRF-command-line-tools/sw/Versions-10-x-x/nRFCommandLineTools1030Linuxamd64tar.gz --output nRFCommandLineTools1030Linuxamd64tar.gz &&
+   tar -xzvf nRFCommandLineTools1030Linuxamd64tar.gz &&
+   tar -xzvf nRF-Command-Line-Tools_10_3_0_Linux-amd64.tar.gz &&
+   sudo apt install ./JLink_Linux_V644e_x86_64.deb &&
+   rm -rf nRF* && rm JL* && rm R* &&  
+   cd ..
+  ```
+
+  
 
 ### Building, Flashing and Debugging
 
@@ -99,7 +130,7 @@ The goal of this project is to create a skeleton of a **customised firmware deve
 
 ##### Building, Flashing and Debugging using the Eclipse IDE
 
-- Go [here](https://eedesignlab.com/2019/10/ble-and-bluetooth-5-with-nordics-nrf5-sdk-gnu-arm-embedded-and-eclipse-ide-part-2/) for setting up the Eclipse IDE for building, flashing and debugging the project.
+- Go [here](https://eedesignlab.com/ble-and-bluetooth-5-with-nordics-nrf5-sdk-gnu-arm-embedded-and-eclipse-ide-part-2/) for setting up the Eclipse IDE for building, flashing and debugging the project.
 
 
 
