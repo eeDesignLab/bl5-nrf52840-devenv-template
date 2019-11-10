@@ -2,6 +2,10 @@
 cmd-tools/nrfjprog
 cmd-tools/mergehex
 
+# GCC Makefiles
+gcc/Makefile.posix
+gcc/Makefile.windows
+
 # Build Outputs
 _build/
 
