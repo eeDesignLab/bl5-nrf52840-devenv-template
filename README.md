@@ -90,7 +90,7 @@ Reference:  [eedesignlab.com](https://eedesignlab.com/development-environment-se
 
 *  Install the command line tools on **Windows Host Machines** (go [here]( https://eedesignlab.com/development-environment-setup-using-nordics-nrf5-sdk-gnu-gcc-and-eclipse-ide-part-i/ ) for help). 
 
-  * From the project's root folder, run the script below:
+  * Run the script below from the project's root folder:
 
   ```bash
   cd cmd-tools &&
@@ -105,7 +105,7 @@ Reference:  [eedesignlab.com](https://eedesignlab.com/development-environment-se
   ```
 
 - Install the command line tools on **Linux Host Machines** (go [here]( https://eedesignlab.com/development-environment-setup-using-nordics-nrf5-sdk-gnu-gcc-and-eclipse-ide-part-i/ ) for help). 
-  - From the project's root folder, run the script below:
+  - Run the script below from the project's root folder:
 
   ```bash
   cd cmd-tools &&
