@@ -64,7 +64,7 @@ Reference:  [eedesignlab.com](https://eedesignlab.com/development-environment-se
 
 - Download and extract the GNU ARM Embedded (go [here](https://eedesignlab.com/2019/09/development-environment-setup-using-nordics-nrf5-sdk-gnu-gcc-and-eclipse-ide-part-i/) for help).
 
-- For **Windows Host Machines**: Open the `/gcc/Makefile.windows` file and set the location (FULL PATH) and the version of the toolchain. 
+- For **Windows Host Machines**: Open the `gcc/Makefile.windows` file and set the location (FULL PATH) and the version of the toolchain. 
 
   ```bash
   GNU_INSTALL_ROOT := C:/<toolchain location>/bin/
@@ -72,7 +72,7 @@ Reference:  [eedesignlab.com](https://eedesignlab.com/development-environment-se
   GNU_PREFIX := arm-none-eabi
   ```
 
-- For **Linux Host Machines**: Open the `/gcc/Makefile.posix` file and set the location (FULL PATH) and the version of the toolchain. 
+- For **Linux Host Machines**: Open the `gcc/Makefile.posix` file and set the location (FULL PATH) and the version of the toolchain. 
 
   ```bash
   GNU_INSTALL_ROOT := /home/<toolchain location>/bin/
